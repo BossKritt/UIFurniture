@@ -3,6 +3,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native'
 import { TextInput, ScrollView } from 'react-native-gesture-handler'
 import { FontAwesome5 } from '@expo/vector-icons'
 import { Ionicons } from '@expo/vector-icons'
+import { AntDesign } from '@expo/vector-icons';
 
 export default class Login extends React.Component {
     render() {
@@ -73,23 +74,35 @@ export default class Login extends React.Component {
                     </View>
                     <TouchableOpacity
                         //onPress={() => this.props.navigation.navigate('Login')}
-                        style={{ flexDirection: 'row', width: "100%", backgroundColor: '#4267B2', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 6, marginTop: 40, marginBottom: 20 }}
+                        style={{ flexDirection: 'row', width: "100%", backgroundColor: '#4267B2', padding: 10, borderRadius: 6, marginTop: 40, marginBottom: 20, alignItems: 'center' }}
                     >
-                        <FontAwesome5 name="facebook" size={24} color="white" />
+                        <FontAwesome5
+                            name="facebook" size={24} color="white"
+                            style={{
+                                marginLeft: 100
+                            }} />
                         <Text style={{ marginLeft: 20, textAlign: 'center', color: '#FFF', fontSize: 16 }}>Facebook</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         //onPress={() => this.props.navigation.navigate('Login')}
-                        style={{ flexDirection: 'row', width: "100%", backgroundColor: '#DB4437', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 6, marginBottom: 20 }}
+                        style={{ flexDirection: 'row', width: "100%", backgroundColor: '#DB4437', padding: 10, borderRadius: 6, marginBottom: 20, alignItems: 'center' }}
                     >
-                        <FontAwesome5 name="google" size={24} color="white" />
+                        <FontAwesome5
+                            name="google" size={24} color="white"
+                            style={{
+                                marginLeft: 100
+                            }} />
                         <Text style={{ marginLeft: 20, textAlign: 'center', color: '#FFF', fontSize: 16 }}>Google</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         //onPress={() => this.props.navigation.navigate('Login')}
-                        style={{ flexDirection: 'row', width: "100%", backgroundColor: '#000000', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 6, marginBottom: 20 }}
+                        style={{ flexDirection: 'row', width: "100%", backgroundColor: '#000000', padding: 10, borderRadius: 6, marginBottom: 20, alignItems: 'center' }}
                     >
-                        <FontAwesome5 name="apple" size={24} color="white" />
+                        <AntDesign
+                            name="apple1" size={24} color="white"
+                            style={{
+                                marginLeft: 100
+                            }} />
                         <Text style={{ marginLeft: 20, textAlign: 'center', color: 'white', fontSize: 16 }}>Apple</Text>
                     </TouchableOpacity>
 
