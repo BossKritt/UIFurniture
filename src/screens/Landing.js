@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Image, TouchableOpacity, ImageBackground } from 'react-native'
+import { View, Text, TouchableOpacity, ImageBackground, StyleSheet } from 'react-native'
 
 export default class Landing extends React.Component {
     render() {
@@ -19,13 +19,13 @@ export default class Landing extends React.Component {
 
                     <TouchableOpacity
                         //onPress={() => this.props.navigation.navigate('Login')}
-                        style={{ width: "100%", backgroundColor: 'white', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 6, marginTop: 40, marginBottom: 20 }}
+                        style={[styles.btnsignup]}
                     >
                         <Text style={{ textAlign: 'center', color: 'black', fontSize: 16 }}>Sign up</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         onPress={() => this.props.navigation.navigate('Login')}
-                        style={{ width: "100%", backgroundColor: 'black', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 6, marginBottom: 30 }}
+                        style={[styles.btnlogin]}
                     >
                         <Text style={{ textAlign: 'center', color: 'white', fontSize: 16 }}>Login</Text>
                     </TouchableOpacity>
@@ -35,3 +35,24 @@ export default class Landing extends React.Component {
         )
     }
 }
+
+const styles = StyleSheet.create({
+    btnsignup: {
+        width: "100%",
+        backgroundColor: 'white',
+        padding: 10, alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 6,
+        marginTop: 40,
+        marginBottom: 20
+    },
+    btnlogin: {
+        width: "100%",
+        backgroundColor: 'black',
+        padding: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 6,
+        marginBottom: 30
+    }
+})

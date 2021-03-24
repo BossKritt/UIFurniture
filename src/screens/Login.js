@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Image, TouchableOpacity } from 'react-native'
+import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native'
 import { TextInput, ScrollView } from 'react-native-gesture-handler'
 import { FontAwesome5 } from '@expo/vector-icons'
 import { Ionicons } from '@expo/vector-icons'
@@ -40,7 +40,7 @@ export default class Login extends React.Component {
                     </View>
 
                     <TextInput
-                        style={{ marginTop: 40, borderBottomColor: '#ddd', borderBottomWidth: 1, paddingBottom: 20 }}
+                        style={[styles.email]}
                         placeholder="Email"
                         //placeholderTextColor="#000"
                         onChangeText={(text) => {
@@ -50,7 +50,7 @@ export default class Login extends React.Component {
                         }
                     />
                     <TextInput
-                        style={{ marginTop: 40, borderBottomColor: '#ddd', borderBottomWidth: 1, paddingBottom: 20 }}
+                        style={[styles.password]}
                         placeholder="Password"
                         //placeholderTextColor="#000"
                         onChangeText={(text) => {
@@ -61,7 +61,7 @@ export default class Login extends React.Component {
                     />
                     <TouchableOpacity
                         onPress={() => this.props.navigation.navigate('Home')}
-                        style={{ width: "100%", backgroundColor: 'black', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 6, marginTop: 40, marginBottom: 30 }}
+                        style={[styles.btnlogin]}
                     >
                         <Text style={{ textAlign: 'center', color: '#FFF', fontSize: 16 }}>Login</Text>
                     </TouchableOpacity>
@@ -74,43 +74,94 @@ export default class Login extends React.Component {
                     </View>
                     <TouchableOpacity
                         //onPress={() => this.props.navigation.navigate('Login')}
-                        style={{ flexDirection: 'row', width: "100%", backgroundColor: '#4267B2', padding: 10, borderRadius: 6, marginTop: 40, marginBottom: 20, alignItems: 'center' }}
+                        style={[styles.btnfacebook]}
                     >
                         <FontAwesome5
                             name="facebook" size={24} color="white"
                             style={{
-                                marginLeft: 100
+                                marginLeft: 95
                             }} />
                         <Text style={{ marginLeft: 20, textAlign: 'center', color: '#FFF', fontSize: 16 }}>Facebook</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         //onPress={() => this.props.navigation.navigate('Login')}
-                        style={{ flexDirection: 'row', width: "100%", backgroundColor: '#DB4437', padding: 10, borderRadius: 6, marginBottom: 20, alignItems: 'center' }}
+                        style={[styles.btngoogle]}
                     >
                         <FontAwesome5
                             name="google" size={24} color="white"
                             style={{
-                                marginLeft: 100
+                                marginLeft: 95
                             }} />
                         <Text style={{ marginLeft: 20, textAlign: 'center', color: '#FFF', fontSize: 16 }}>Google</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         //onPress={() => this.props.navigation.navigate('Login')}
-                        style={{ flexDirection: 'row', width: "100%", backgroundColor: '#000000', padding: 10, borderRadius: 6, marginBottom: 20, alignItems: 'center' }}
+                        style={[styles.btnapple]}
                     >
                         <AntDesign
                             name="apple1" size={24} color="white"
                             style={{
-                                marginLeft: 100
+                                marginLeft: 95
                             }} />
                         <Text style={{ marginLeft: 20, textAlign: 'center', color: 'white', fontSize: 16 }}>Apple</Text>
                     </TouchableOpacity>
 
                 </View>
 
-
-
             </ScrollView>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    email: {
+        marginTop: 40,
+        borderBottomColor: '#ddd',
+        borderBottomWidth: 1,
+        paddingBottom: 20
+    },
+    password: {
+        marginTop: 40,
+        borderBottomColor: '#ddd',
+        borderBottomWidth: 1,
+        paddingBottom: 20
+    },
+    btnlogin: {
+        width: "100%",
+        backgroundColor: 'black',
+        padding: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 6,
+        marginTop: 40,
+        marginBottom: 30
+    },
+    btnfacebook: {
+        flexDirection: 'row',
+        width: "100%",
+        backgroundColor: '#4267B2',
+        padding: 8,
+        borderRadius: 6,
+        marginTop: 30,
+        marginBottom: 20,
+        alignItems: 'center'
+    },
+    btngoogle: {
+        flexDirection: 'row',
+        width: "100%",
+        backgroundColor: '#DB4437',
+        padding: 8,
+        borderRadius: 6,
+        marginBottom: 20,
+        alignItems: 'center'
+    },
+    btnapple: {
+        flexDirection: 'row',
+        width: "100%",
+        backgroundColor: '#000000',
+        padding: 8,
+        borderRadius: 6,
+        marginBottom: 20,
+        alignItems: 'center'
+    }
+})
