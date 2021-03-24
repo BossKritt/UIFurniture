@@ -6,6 +6,8 @@ import Detail from '../screens/Detail'
 import { AppLoading } from 'expo'
 import Landing from '../screens/Landing'
 import Profile from '../screens/Profile'
+import Address from '../screens/Address'
+import Cart from '../screens/Cart'
 
 const stackNavigatorOptions = {
     headerShown: false
@@ -16,7 +18,9 @@ const AppNavigator = createStackNavigator({
     Login: { screen: Login },
     Home: { screen: Home },
     Detail: { screen: Detail },
-    Profile: { screen: Profile }
+    Profile: { screen: Profile },
+    Address: { screen: Address },
+    Cart: { screen: Cart }
 },
     {
         defaultNavigationOptions: stackNavigatorOptions

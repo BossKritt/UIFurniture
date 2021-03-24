@@ -31,7 +31,7 @@ export default class Detail extends React.Component {
                 <View style={{
                     flexDirection: "row",
                     width: "100%",
-                    marginTop: 40
+                    marginTop: 60
                 }}>
                     <TouchableOpacity
                         onPress={() => this.props.navigation.goBack()}
@@ -51,10 +51,14 @@ export default class Detail extends React.Component {
                         width: "50%",
                         alignItems: "flex-end"
                     }}>
-                        <Image
-                            source={require('../images/bag-2.png')}
-                            style={{ width: 16, height: 20 }}
-                        />
+                        <TouchableOpacity
+                            onPress={() => this.props.navigation.navigate("Cart")}>
+                            <Image
+                                source={require('../images/bag-2.png')}
+                                style={{ width: 16, height: 20 }}
+                            />
+                        </TouchableOpacity>
+
                     </View>
                 </View>
 
@@ -244,31 +248,34 @@ export default class Detail extends React.Component {
                 </ScrollView>
 
 
+                <TouchableOpacity
+                    onPress={() => this.props.navigation.navigate("Cart")}>
+                    <View style={{
+                        backgroundColor: "#000",
+                        flexDirection: "row",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        borderRadius: 6,
+                        padding: 12,
+                        marginBottom: 50
 
-                <View style={{
-                    backgroundColor: "#000",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    borderRadius: 10,
-                    padding: 12,
-                    marginBottom: 15
-
-                }}>
-                    <Image
-                        source={require('../images/bag.png')}
-                        style={{ height: 20, width: 16 }}
-                    />
-                    <Text style={{
-                        fontSize: 20,
-                        color: "#FFF",
-                        fontFamily: "Bold",
-                        marginHorizontal: 15
                     }}>
-                        Add to Cart
+                        <Image
+                            source={require('../images/bag.png')}
+                            style={{ height: 20, width: 16 }}
+                        />
+                        <Text style={{
+                            fontSize: 20,
+                            color: "#FFF",
+                            fontFamily: "Bold",
+                            marginHorizontal: 15
+                        }}>
+                            Add to Cart
                                 </Text>
 
-                </View>
+                    </View>
+                </TouchableOpacity>
+
             </View>
         );
     }

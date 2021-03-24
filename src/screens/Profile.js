@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, StyleSheet, ImageBackground, SafeAreaView, } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import { ScrollView } from "react-native-gesture-handler";
 import { Avatar, Title, Caption, TouchableRipple } from "react-native-paper";
 
 export default class Profile extends React.Component {
@@ -12,8 +11,9 @@ export default class Profile extends React.Component {
           onPress={() => this.props.navigation.goBack()}
           style={{
             width: "50%",
-            marginTop: 50,
-            marginLeft: 30,
+            marginTop: 20,
+            paddingHorizontal: 20
+            //marginLeft: 30,
           }}
         >
           <Image
@@ -40,7 +40,8 @@ export default class Profile extends React.Component {
             <View style={{ marginTop: 50 }}>
 
               {/* ดูรถเข็น */}
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => this.props.navigation.navigate('Cart')}>
                 <View style={style.button}>
                   <Icon name="cart-outline" color="#000" size={30} style={{ alignSelf: "center", }} />
                   <Text
@@ -92,7 +93,8 @@ export default class Profile extends React.Component {
                 }}
               />
               {/* ปุ่มล็อคเอาท์ */}
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => this.props.navigation.navigate('Landing')}>
                 <View style={style.button}>
                   <Icon name="logout-variant" color="#000" size={30} style={{ alignSelf: "center", }} />
                   <Text
@@ -128,6 +130,7 @@ const style = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#FFFFFF",
+
   },
   userInfoSection: {
     paddingHorizontal: 30,

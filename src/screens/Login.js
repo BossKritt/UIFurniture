@@ -92,7 +92,7 @@ export default class Login extends React.Component {
                             style={{
                                 marginLeft: 95
                             }} />
-                        <Text style={{ marginLeft: 20, textAlign: 'center', color: '#FFF', fontSize: 16 }}>Google</Text>
+                        <Text style={{ marginLeft: 26, textAlign: 'center', color: '#FFF', fontSize: 16 }}>Google</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         //onPress={() => this.props.navigation.navigate('Login')}
@@ -103,7 +103,7 @@ export default class Login extends React.Component {
                             style={{
                                 marginLeft: 95
                             }} />
-                        <Text style={{ marginLeft: 20, textAlign: 'center', color: 'white', fontSize: 16 }}>Apple</Text>
+                        <Text style={{ marginLeft: 30, textAlign: 'center', color: 'white', fontSize: 16 }}>Apple</Text>
                     </TouchableOpacity>
 
                 </View>

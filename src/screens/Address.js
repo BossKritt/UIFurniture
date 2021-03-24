@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  StyleSheet,
-  ImageBackground,
-  SafeAreaView,
-} from "react-native";
+import { View, Text, Image, TouchableOpacity, StyleSheet, SafeAreaView, } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { ScrollView } from "react-native-gesture-handler";
 import { Avatar, Title, Caption, TouchableRipple } from "react-native-paper";
@@ -20,8 +12,9 @@ export default class Address extends React.Component {
           onPress={() => this.props.navigation.goBack()}
           style={{
             width: "50%",
-            marginTop: 50,
-            marginLeft: 30,
+            marginTop: 20,
+            //marginLeft: 30,
+            paddingHorizontal: 20
           }}
         >
           <Image
@@ -42,7 +35,7 @@ export default class Address extends React.Component {
                 <Text style={style.title}>19/164 ซ.เวฬุวนาราม28</Text>
                 <Text style={style.title}>แขวงดอนเมือง เขตดอนเมือง</Text>
                 <Text style={style.title}>กรุงเทพมหานคร 10210</Text>
-              </View> 
+              </View>
               <View
                 style={{
                   marginTop: 10,
@@ -100,7 +93,7 @@ const style = StyleSheet.create({
     color: "#000000",
   },
   button: {
-    flexDirection:"row",
+    flexDirection: "row",
     backgroundColor: "#000000",
     width: "100%",
     borderRadius: 0,
@@ -120,6 +113,6 @@ const style = StyleSheet.create({
     padding: 5,
     elevation: 2,
     padding: 10
-    
+
   }
 });

@@ -45,7 +45,7 @@ export default class Home extends React.Component {
                             flexDirection: "row-reverse",
                         }}
                     >
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate("Detail")}>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate("Cart")}>
                             <Image
                                 source={require("../images/bag-2.png")}
                                 style={{ width: 16, height: 20, margin: 10 }}
