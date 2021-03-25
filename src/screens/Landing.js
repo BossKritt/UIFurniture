@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, ImageBackground, StyleSheet } from 'react-native'
+import { View, Text, TouchableOpacity, Image, ImageBackground, StyleSheet } from 'react-native'
 
 export default class Landing extends React.Component {
     render() {
@@ -12,11 +12,16 @@ export default class Landing extends React.Component {
                     justifyContent: "center"
                 }}
             >
+                <View>
+                    <Image
+                        source={require('../images/logo.png')}
+                        style={{ alignSelf: 'center', width: 100, height: 100 }}>
+                    </Image>
+                </View>
                 <View style={{
                     paddingHorizontal: 40,
-                    marginTop: 600
+                    marginTop: 500
                 }}>
-
                     <TouchableOpacity
                         //onPress={() => this.props.navigation.navigate('Login')}
                         style={[styles.btnsignup]}

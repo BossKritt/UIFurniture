@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity, StyleSheet, ImageBackground, SafeAreaView, } from "react-native";
+import { View, Text, Image, TouchableOpacity, StyleSheet, SafeAreaView, } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import { Avatar, Title, Caption, TouchableRipple } from "react-native-paper";
+import { Avatar, Title, Caption } from "react-native-paper";
 
 export default class Profile extends React.Component {
   render() {

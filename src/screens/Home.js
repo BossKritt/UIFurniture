@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, ImageBackground } from "react-native";
+import { View, Text, Image } from "react-native";
 import { TextInput, ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import Icon from "@expo/vector-icons/Ionicons";
 import Couches from "../common/Couches";
@@ -74,8 +74,8 @@ export default class Home extends React.Component {
                             flexDirection: "row",
                             alignItems: "center",
                             elevation: 2,
-                            width: "85%",
-                            backgroundColor: "#FFF",
+                            width: "100%",
+                            backgroundColor: "#ddd",
                             paddingHorizontal: 20,
                             height: 35,
                             borderRadius: 10,
@@ -86,32 +86,11 @@ export default class Home extends React.Component {
                         <Icon name="ios-search" size={22} color="#4f4a4a" />
                         <TextInput
                             placeholder="Search furniture......"
+                            placeholderTextColor= "black"
                             style={{
                                 fontFamily: "Medium",
                                 paddingHorizontal: 10,
                                 fontSize: 12,
-                            }}
-                        />
-                    </View>
-
-                    <View
-                        style={{
-                            alignItems: "center",
-                            elevation: 2,
-                            width: "15%",
-                            backgroundColor: "#FFF",
-                            marginLeft: 5,
-                            height: 35,
-                            borderRadius: 10,
-                            marginLeft: 1,
-                            justifyContent: "center",
-                        }}
-                    >
-                        <Image
-                            source={require("../images/sort.png")}
-                            style={{
-                                width: 18,
-                                height: 25,
                             }}
                         />
                     </View>

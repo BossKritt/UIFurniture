@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Image, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native'
+import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import SwiperComponent from '../common/SwiperComponent'
 import Stars from 'react-native-stars';
@@ -265,7 +265,7 @@ export default class Detail extends React.Component {
                             style={{ height: 20, width: 16 }}
                         />
                         <Text style={{
-                            fontSize: 20,
+                            fontSize: 16,
                             color: "#FFF",
                             fontFamily: "Bold",
                             marginHorizontal: 15

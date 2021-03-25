@@ -1,8 +1,6 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, StyleSheet, SafeAreaView, } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import { ScrollView } from "react-native-gesture-handler";
-import { Avatar, Title, Caption, TouchableRipple } from "react-native-paper";
 
 export default class Address extends React.Component {
   render() {
